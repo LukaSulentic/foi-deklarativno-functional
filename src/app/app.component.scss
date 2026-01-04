@@ -174,3 +174,41 @@
     }
   }
 }
+  .btn-outline-dark {
+  background-color: #e2e6ea;
+  border: 2px solid #343a40;
+  color: #343a40 !important;
+  font-weight: 700;
+  
+  &:hover {
+    background-color: #343a40;
+    color: white !important;
+  }
+}
+
+.code-panel {
+  margin-top: 30px;
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+  h3 {
+    color: #ff79c6;
+    margin-top: 0;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    font-family: 'Consolas', monospace;
+  }
+
+  pre {
+    margin: 0;
+    overflow-x: auto;
+    code {
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+}

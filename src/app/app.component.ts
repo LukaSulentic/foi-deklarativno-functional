@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SensorReading } from './models/sensor.model';
 import { RAW_DATA } from './data/mock-data';
 import { myFilter, myMap, myReduce, myPipe } from './core/functional-utils';
+import { CODE_SNIPPETS } from './data/code-snippets';
 
 @Component({
   selector: 'app-root',
@@ -21,10 +22,13 @@ export class AppComponent {
   viewMode: 'table' | 'list' | 'stat' = 'table';
   currentOperation: string = 'Prikaz izvornih podataka';
 
+  activeCodeSnippet: string | null = null;
+
   reset() {
     this.displayData = [...this.sourceData];
     this.viewMode = 'table';
     this.currentOperation = 'Reset - Izvorni podaci';
+    this.activeCodeSnippet = null;
   }
 
   applyFilter() {
@@ -33,6 +37,17 @@ export class AppComponent {
     this.displayData = myFilter(this.sourceData, isCritical);
     this.viewMode = 'table';
     this.currentOperation = 'myFilter(data, battery < 20)';
+    this.activeCodeSnippet = CODE_SNIPPETS.filter;
+  }
+
+  applyImpossibleFilter() {
+    const impossibleCondition = (s: SensorReading) => s.value > 1000 && s.sensorType === 'temperature';
+    
+    this.displayData = myFilter(this.sourceData, impossibleCondition);
+    
+    this.viewMode = 'table';
+    this.currentOperation = 'EDGE CASE: myFilter(temp > 1000)';
+    this.activeCodeSnippet = CODE_SNIPPETS.filter;
   }
 
   applyMap() {
@@ -41,6 +56,7 @@ export class AppComponent {
     this.displayData = myMap(this.sourceData, toAlertString);
     this.viewMode = 'list';
     this.currentOperation = 'myMap(data, createAlertString)';
+    this.activeCodeSnippet = CODE_SNIPPETS.map;
   }
 
   applyReduce() {
@@ -54,6 +70,7 @@ export class AppComponent {
     this.displayData = Number(avg);
     this.viewMode = 'stat';
     this.currentOperation = 'myReduce(temps, sum) / count';
+    this.activeCodeSnippet = CODE_SNIPPETS.reduce;
   }
 
   applyPipe() {
@@ -62,7 +79,8 @@ export class AppComponent {
 
     this.displayData = myPipe(this.sourceData, filterCritical, mapToMessage);
     this.viewMode = 'list';
-    this.currentOperation = 'myPipe(data, filterCritical, mapToMessage)'
+    this.currentOperation = 'myPipe(data, filterCritical, mapToMessage)';
+    this.activeCodeSnippet = CODE_SNIPPETS.pipe;
   }
 }
 
