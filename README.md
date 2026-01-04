@@ -3,11 +3,11 @@
 Projektni zadatak iz kolegija **Deklarativno programiranje**.
 Aplikacija demonstrira primjenu paradigmi funkcijskog programiranja (rekurzija, imutabilnost, funkcije višeg reda) unutar imperativnog okruženja (TypeScript/Angular).
 
-## 🎯 Cilj projekta
+## Cilj projekta
 
 Implementirati osnovne funkcijske primitive (`map`, `filter`, `reduce`, `pipe`) korištenjem **rekurzije**, bez oslanjanja na ugrađene metode prototipa niza (`Array.prototype.map` i sl.), te prikazati njihovo korištenje na stvarnom setu podataka (očitanja IoT senzora).
 
-## 🛠️ Funkcionalnosti
+## Funkcionalnosti
 
 Aplikacija omogućuje vizualizaciju transformacije podataka kroz interaktivno sučelje:
 
@@ -18,7 +18,7 @@ Aplikacija omogućuje vizualizaciju transformacije podataka kroz interaktivno su
 5.  **Edge Case Handling:** Demonstracija ponašanja rekurzivnih funkcija nad praznim skupom podataka.
 6.  **Code Inspection:** Prikaz izvornog koda implementirane funkcije unutar sučelja.
 
-## 🧬 Implementacija jezgre (Core)
+## Implementacija jezgre (Core)
 
 Sva logika nalazi se u `src/app/core/functional-utils.ts`.
 Funkcije su implementirane prema principima $\lambda$-računa:
