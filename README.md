@@ -37,7 +37,7 @@ export const myFilter = <T>(array: T[], predicateFn: (item: T) => boolean): T[] 
 };
 ```
 
-## 🚀 Pokretanje aplikacije
+## Pokretanje aplikacije
 
 Za pokretanje projekta potrebno je imati instaliran **Node.js**.
 
