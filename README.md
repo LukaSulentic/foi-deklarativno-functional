@@ -35,3 +35,27 @@ export const myFilter = <T>(array: T[], predicateFn: (item: T) => boolean): T[] 
         ? [head!, ...myFilter(tail, predicateFn)] 
         : myFilter(tail, predicateFn);
 };
+
+## 🚀 Pokretanje aplikacije
+
+Za pokretanje projekta potrebno je imati instaliran **Node.js**.
+
+1.  **Instalacija zavisnosti:**
+    Otvorite terminal u mapi projekta i pokrenite:
+    ```bash
+    npm install
+    ```
+
+2.  **Pokretanje lokalnog servera:**
+    Nakon instalacije, pokrenite aplikaciju naredbom:
+    ```bash
+    ng serve
+    ```
+
+3.  **Pristup aplikaciji:**
+    Otvorite preglednik i posjetite: `http://localhost:4200/`
+
+## 👨‍💻 Autor
+
+Student: **Luka Šulentić**  
+Fakultet organizacije i informatike (FOI)
