@@ -35,6 +35,7 @@ export const myFilter = <T>(array: T[], predicateFn: (item: T) => boolean): T[] 
         ? [head!, ...myFilter(tail, predicateFn)] 
         : myFilter(tail, predicateFn);
 };
+```
 
 ## 🚀 Pokretanje aplikacije
 
