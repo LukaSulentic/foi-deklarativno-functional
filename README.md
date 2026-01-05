@@ -56,7 +56,7 @@ Za pokretanje projekta potrebno je imati instaliran **Node.js**.
 3.  **Pristup aplikaciji:**
     Otvorite preglednik i posjetite: `http://localhost:4200/`
 
-## 👨‍💻 Autor
+## Autor
 
 Student: **Luka Šulentić**  
 Fakultet organizacije i informatike (FOI)
